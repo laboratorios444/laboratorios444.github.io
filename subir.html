@@ -1,0 +1,495 @@
+<html><head><base href=""/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title> EcoCNI - Repositorio Institucional Digital</title><style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+    :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #f0f0f0;
+        --accent-color: #ff6b6b;
+        --text-color: #333;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        background-color: var(--secondary-color);
+    }
+
+    header {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 2rem;
+    }
+
+    .logo svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--secondary-color);
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 0;
+        font-weight: 300;
+    }
+
+    nav {
+        background-color: var(--primary-color);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+        padding: 0.5rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--accent-color);
+    }
+
+    .nav-button {
+        display: none;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-button:hover {
+        background-color: #ff4f4f;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    .search-container, .upload-container {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+
+    input[type="text"], input[type="file"], textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    button {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #ff4f4f;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .project-item {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-item h3 {
+        margin-top: 0;
+        color: var(--primary-color);
+    }
+
+    .comments {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #ddd;
+    }
+
+    .comment {
+        background-color: #f9f9f9;
+        padding: 0.8rem;
+        border-radius: 4px;
+        margin-bottom: 0.5rem;
+    }
+
+    .file-viewer {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-top: 2rem;
+    }
+
+    .file-viewer iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    footer {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: none;
+        }
+
+        .nav-button {
+            display: block;
+        }
+
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+</style></head><body>
+<header>
+<div class="header-content">
+<div class="logo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"></path>
+</svg>
+</div>
+<div class="title">
+<h1>EcoCNI</h1>
+<h2>Repositorio Digital</h2>
+</div>
+</div>
+</header>
+<nav id="main-nav">
+<button class="nav-button" id="nav-toggle">Menú</button>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="proyectos.html">Proyectos</a></li>
+<li><a href="subir.html">Subir Proyecto</a></li>
+<li><a href="acerca de.html">Acerca de</a></li>
+</ul>
+</nav>
+<main>
+<div class="search-container">
+<input id="search-input" placeholder="Buscar proyectos..." type="text"/>
+<button id="search-button">Buscar</button>
+</div>
+<div class="upload-container">
+<h3>Subir Nuevo Proyecto</h3>
+<input id="title-input" placeholder="Título del proyecto" type="text"/>
+<input id="author-input" placeholder="Autor del proyecto" type="text"/>
+<textarea id="description-input" placeholder="Descripción del proyecto" rows="4"></textarea>
+<input accept=".pdf,.doc,.docx,.txt" id="file-input" type="file"/>
+<button id="upload-button">Subir Proyecto</button>
+</div>
+<h3>Proyectos Recientes</h3>
+<div class="projects" id="projects-container">
+<!-- Los proyectos se cargarán dinámicamente aquí -->
+</div>
+<div class="file-viewer" id="file-viewer" style="display: none;">
+<h3>Visor de Archivos</h3>
+<iframe id="file-iframe"></iframe>
+</div>
+</main>
+<footer>
+<p>© 2024 ASmith. Todos los derechos reservados.</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const titleInput = document.getElementById('title-input');
+        const authorInput = document.getElementById('author-input');
+        const descriptionInput = document.getElementById('description-input');
+        const fileInput = document.getElementById('file-input');
+        const uploadButton = document.getElementById('upload-button');
+        const projectsContainer = document.getElementById('projects-container');
+        const fileViewer = document.getElementById('file-viewer');
+        const fileIframe = document.getElementById('file-iframe');
+        const nav = document.getElementById('main-nav');
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = nav.querySelector('ul');
+
+        // Simulación de base de datos de proyectos
+        let projects = [];
+
+        searchButton.addEventListener('click', performSearch);
+        uploadButton.addEventListener('click', uploadProject);
+        navToggle.addEventListener('click', toggleNav);
+
+        function performSearch() {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            const filteredProjects = projects.filter(project => 
+                project.title.toLowerCase().includes(searchTerm) ||
+                project.author.toLowerCase().includes(searchTerm) ||
+                project.description.toLowerCase().includes(searchTerm)
+            );
+            renderProjects(filteredProjects);
+        }
+
+        function uploadProject() {
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('Por favor, seleccione un archivo para subir.');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const newProject = {
+                    id: Date.now(),
+                    title: titleInput.value,
+                    author: authorInput.value,
+                    description: descriptionInput.value,
+                    file: file.name,
+                    fileContent: e.target.result,
+                    fileType: file.type,
+                    comments: []
+                };
+                projects.unshift(newProject);
+                renderProjects(projects);
+                clearInputs();
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function renderProjects(projectsToRender) {
+            projectsContainer.innerHTML = '';
+            projectsToRender.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.className = 'project-item';
+                projectElement.innerHTML = `
+                    <h3>${project.title}</h3>
+                    <p><strong>Autor:</strong> ${project.author}</p>
+                    <p><strong>Descripción:</strong> ${project.description}</p>
+                    <p><strong>Archivo:</strong> ${project.file}</p>
+                    <button onclick="viewFile(${project.id})">Ver Archivo</button>
+                    <div class="comments">
+                        <h4>Comentarios:</h4>
+                        ${project.comments.map(comment => `<div class="comment">${comment}</div>`).join('')}
+                        <input type="text" id="comment-input-${project.id}" placeholder="Añadir un comentario">
+                        <button onclick="addComment(${project.id})">Comentar</button>
+                    </div>
+                `;
+                projectsContainer.appendChild(projectElement);
+            });
+        }
+
+        function clearInputs() {
+            titleInput.value = '';
+            authorInput.value = '';
+            descriptionInput.value = '';
+            fileInput.value = '';
+        }
+
+        function toggleNav() {
+            navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Función para mantener el nav fijo al desplazarse
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Función global para añadir comentarios
+        window.addComment = function(projectId) {
+            const commentInput = document.getElementById(`comment-input-${projectId}`);
+            const comment = commentInput.value.trim();
+            if (comment) {
+                const project = projects.find(p => p.id === projectId);
+                if (project) {
+                    project.comments.push(comment);
+                    renderProjects(projects);
+                }
+            }
+        };
+
+        // Función global para ver archivos
+        window.viewFile = function(projectId) {
+            const project = projects.find(p => p.id === projectId);
+            if (project && project.fileContent) {
+                fileIframe.src = project.fileContent;
+                fileViewer.style.display = 'block';
+                fileViewer.scrollIntoView({behavior: 'smooth'});
+            } else {
+                alert('No se puede mostrar el archivo.');
+            }
+        };
+
+        // Inicializar con algunos proyectos de ejemplo
+        projects = [
+            {id: 1, title: "Estudio sobre energías renovables", author: "María González", description: "Análisis comparativo de diferentes fuentes de energía renovable", file: "energias_renovables.pdf", fileContent: "data:application/pdf;base64,JVBERi0xLjMNCiXi48/TDQoNCjEgMCBvYmoNCjw8DQovVHlwZSAvQ2F0YWxvZw0KL091dGxpbmVzIDIgMCBSDQovUGFnZXMgMyAwIFINCj4+DQplbmRvYmoNCg0KMiAwIG9iag0KPDwNCi9UeXBlIC9PdXRsaW5lcw0KL0NvdW50IDANCj4+DQplbmRvYmoNCg0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdlcw0KL0NvdW50IDINCi9LaWRzIFsgNCAwIFIgNiAwIFIgXSANCj4+DQplbmRvYmoNCg0KNCAwIG9iag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDMgMCBSDQovUmVzb3VyY2VzIDw8DQovRm9udCA8PA0KL0YxIDkgMCBSIA0KPj4NCi9Qcm9jU2V0IDggMCBSDQo+Pg0KL01lZGlhQm94IFswIDAgNjEyLjAwMDAgNzkyLjAwMDBdDQovQ29udGVudHMgNSAwIFINCj4+DQplbmRvYmoNCg0KNSAwIG9iag0KPDwgL0xlbmd0aCAxMDc0ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBBIFNpbXBsZSBQREYgRmlsZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIFRoaXMgaXMgYSBzbWFsbCBkZW1vbnN0cmF0aW9uIC5wZGYgZmlsZSAtICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjY0LjcwNDAgVGQNCigganVzdCBmb3IgdXNlIGluIHRoZSBWaXJ0dWFsIE1lY2hhbmljcyB0dXRvcmlhbHMuIE1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NTIuNzUyMCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDYyOC44NDgwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjE2Ljg5NjAgVGQNCiggdGV4dC4gQW5kIG1vcmUgdGV4dC4gQm9yaW5nLCB6enp6ei4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjA0Ljk0NDAgVGQNCiggbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDU5Mi45OTIwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNTY5LjA4ODAgVGQNCiggQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA1NTcuMTM2MCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBFdmVuIG1vcmUuIENvbnRpbnVlZCBvbiBwYWdlIDIgLi4uKSBUag0KRVQNCmVuZHN0cmVhbQ0KZW5kb2JqDQoNCjYgMCBvYmoNCjw8DQovVHlwZSAvUGFnZQ0KL1BhcmVudCAzIDAgUg0KL1Jlc291cmNlcyA8PA0KL0ZvbnQgPDwNCi9GMSA5IDAgUiANCj4+DQovUHJvY1NldCA4IDAgUg0KPj4NCi9NZWRpYUJveCBbMCAwIDYxMi4wMDAwIDc5Mi4wMDAwXQ0KL0NvbnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoNCjcgMCBvYmoNCjw8IC9MZW5ndGggNjc2ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBTaW1wbGUgUERGIEZpbGUgMiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIC4uLmNvbnRpbnVlZCBmcm9tIHBhZ2UgMS4gWWV0IG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NzYuNjU2MCBUZA0KKCBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY2NC43MDQwIFRkDQooIHRleHQuIE9oLCBob3cgYm9yaW5nIHR5cGluZyB0aGlzIHN0dWZmLiBCdXQgbm90IGFzIGJvcmluZyBhcyB3YXRjaGluZyApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY1Mi43NTIwIFRkDQooIHBhaW50IGRyeS4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NDAuODAwMCBUZA0KKCBCb3JpbmcuICBNb3JlLCBhIGxpdHRsZSBtb3JlIHRleHQuIFRoZSBlbmQsIGFuZCBqdXN0IGFzIHdlbGwuICkgVGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KDQo4IDAgb2JqDQpbL1BERiAvVGV4dF0NCmVuZG9iag0KDQo5IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL05hbWUgL0YxDQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQplbmRvYmoNCg0KMTAgMCBvYmoNCjw8DQovQ3JlYXRvciAoUmF2ZSBcKGh0dHA6Ly93d3cubmV2cm9uYS5jb20vcmF2ZVwpKQ0KL1Byb2R1Y2VyIChOZXZyb25hIERlc2lnbnMpDQovQ3JlYXRpb25EYXRlIChEOjIwMDYwMzAxMDcyODI2KQ0KPj4NCmVuZG9iag0KDQp4cmVmDQowIDExDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDAwMTkgMDAwMDAgbg0KMDAwMDAwMDA5MyAwMDAwMCBuDQowMDAwMDAwMTQ3IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDM5MCAwMDAwMCBuDQowMDAwMDAxNTIyIDAwMDAwIG4NCjAwMDAwMDE2OTAgMDAwMDAgbg0KMDAwMDAwMjQyMyAwMDAwMCBuDQowMDAwMDAyNDU2IDAwMDAwIG4NCjAwMDAwMDI1NzQgMDAwMDAgbg0KDQp0cmFpbGVyDQo8PA0KL1NpemUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAxMCAwIFINCj4+DQoNCnN0YXJ0eHJlZg0KMjcxNA0KJSVFT0YNCg==", fileType: "application/pdf", comments: ["Excelente trabajo!", "Muy informativo"]},
+            {id: 2, title: "Impacto de la inteligencia artificial en la educación", author: "Carlos Rodríguez", description: "Investigación sobre cómo la IA está transformando los métodos de enseñanza", file: "ia_educacion.docx", fileContent: "data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,UEsDBBQABgAIAAAAIQD8kTYbXQEAALAEAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsVMluwjAQvVfqP0S+Vomhh6qqCBy6HFsk6AeYeJJYJLblGSj8fSdmUVWxCMElUWzPWybzPBit2iZZQkDjbC76WU8kYAunja1y8T39SJ9FgqSsVo2zkIs1oBgN7+8G07UHTLjaYi5qIv8iJRY1tAoz58HyTulCq4g/QyW9KuaqAvnY6z3JwlkCSyl1GGI4eINSLRpK3le8vFEyM1Ykr5tzHVUulPeNKRSxULm0+h9J6srSFKBdsWgZOkMfQGmsAahtMh8MM4YJELExFPIgZ4AGLyPdusq4MgrD2nh8YOtHGLqd4M0KXPJaA5cplPJ6wSZpozA0hr8h1cgn3Bounbyll/B5M3YWAnqOidiSJrv4b2/5jTEEBV9/Qha9vRfkhVb5CpXzlLK6cXmJybzhlJ7q8IXd+L5lfOSIzZZ4qlYlJWuR0a2kXEH+Yy6Ova0J5BPHFXL3L8jEB6NaXDt82/ji9o/pn72u3uAXUEsDBBQABgAIAAAAIQAekRq38wAAAE4CAAALAAgCX3JlbHMvLnJlbHMg", fileType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document", comments: ["Muy interesante!", "Me gustaría ver más ejemplos prácticos"]},
+        ];
+
+        renderProjects(projects);
+
+        // Responsive navigation
+        function toggleNav() {
+            const navList = nav.querySelector('ul');
+            if (navList.style.display === 'flex') {
+                navList.style.display = 'none';
+            } else {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'column';
+                navList.style.position = 'absolute';
+                navList.style.top = '100%';
+                navList.style.left = '0';
+                navList.style.right = '0';
+                navList.style.backgroundColor = 'var(--primary-color)';
+                navList.style.padding = '1rem';
+            }
+        }
+
+        // Event listener for window resize
+        window.addEventListener('resize', function() {
+            const navList = nav.querySelector('ul');
+            if (window.innerWidth > 768) {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'row';
+                navList.style.position = 'static';
+                navList.style.padding = '0';
+            } else {
+                navList.style.display = 'none';
+            }
+        });
+    });
+    
+    </script>
+<script>
+document.getElementById('upload-button').addEventListener('click', function() {
+    const title = document.getElementById('title-input').value;
+    const author = document.getElementById('author-input').value;
+    const description = document.getElementById('description-input').value;
+    const file = document.getElementById('file-input').files[0];
+    
+    if (title && author && description && file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const project = {
+                id: Date.now(),
+                title,
+                author,
+                description,
+                fileName: file.name,
+                fileContent: e.target.result,
+            };
+            saveProject(project);
+        };
+        reader.readAsDataURL(file);
+    } else {
+        alert('Por favor, completa todos los campos.');
+    }
+});
+
+function saveProject(project) {
+    let projects = JSON.parse(localStorage.getItem('projects')) || [];
+    projects.push(project);
+    localStorage.setItem('projects', JSON.stringify(projects));
+    alert('Proyecto guardado exitosamente.');
+}
+</script></body></html>

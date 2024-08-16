@@ -1,0 +1,328 @@
+<html><head><base href="">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acerca de - EcoCNI - Repositorio Institucional Digital</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+    :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #f0f0f0;
+        --accent-color: #ff6b6b;
+        --text-color: #333;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        background-color: var(--secondary-color);
+    }
+
+    header {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 2rem;
+    }
+
+    .logo svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--secondary-color);
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 0;
+        font-weight: 300;
+    }
+
+    nav {
+        background-color: var(--primary-color);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+        padding: 0.5rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--accent-color);
+    }
+
+    .nav-button {
+        display: none;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-button:hover {
+        background-color: #ff4f4f;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    .about-section {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+
+    .about-section h2 {
+        color: var(--primary-color);
+        margin-top: 0;
+    }
+
+    .team-section {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .team-section h2 {
+        color: var(--primary-color);
+        margin-top: 0;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .team-member {
+        text-align: center;
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    .team-member h3 {
+        margin: 0;
+        color: var(--primary-color);
+    }
+
+    .team-member p {
+        margin: 0.5rem 0 0;
+        font-style: italic;
+        color: #666;
+    }
+
+    footer {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: none;
+        }
+
+        .nav-button {
+            display: block;
+        }
+
+        .team-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                </svg>
+            </div>
+            <div class="title">
+                <h1>EcoCNI</h1>
+                <h2>Repositorio Digital</h2>
+            </div>
+        </div>
+    </header>
+    <nav id="main-nav">
+        <button class="nav-button" id="nav-toggle">Menú</button>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="subir.html">Subir Proyecto</a></li>
+            <li><a href="acerca de.html">Acerca de</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="about-section">
+            <h2>Acerca de EcoCNI</h2>
+            <p>EcoCNI no es solo una plataforma para compartir proyectos; es un puente hacia una educación más sostenible y consciente. </p>
+            <p>Ayuda a los estudiantes a desarrollar habilidades esenciales para el siglo XXI, como la creatividad, la colaboración y la resolución de problemas, mientras se involucran en temas cruciales para el futuro de nuestro planeta.</p>
+        </section>
+        <!-- <section class="team-section">
+            <h2>Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://repository.example.edu/images/team/maria-rodriguez.jpg" alt="Foto de María Rodríguez" width="150" height="150">
+                    <h3>Dra. María Rodríguez</h3>
+                    <p>Directora del Repositorio</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://repository.example.edu/images/team/juan-perez.jpg" alt="Foto de Juan Pérez" width="150" height="150">
+                    <h3>Dr. Juan Pérez</h3>
+                    <p>Coordinador de Contenidos</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://repository.example.edu/images/team/ana-gomez.jpg" alt="Foto de Ana Gómez" width="150" height="150">
+                    <h3>Ing. Ana Gómez</h3>
+                    <p>Desarrolladora de Sistemas</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://repository.example.edu/images/team/carlos-sanchez.jpg" alt="Foto de Carlos Sánchez" width="150" height="150">
+                    <h3>Lic. Carlos Sánchez</h3>
+                    <p>Gestor de Metadatos</p>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <p>&copy; 2024 ASmith. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const nav = document.getElementById('main-nav');
+        const navToggle = document.getElementById('nav-toggle');
+
+        // Función para mantener el nav fijo al desplazarse
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Responsive navigation
+        navToggle.addEventListener('click', function() {
+            const navList = nav.querySelector('ul');
+            if (navList.style.display === 'flex') {
+                navList.style.display = 'none';
+            } else {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'column';
+                navList.style.position = 'absolute';
+                navList.style.top = '100%';
+                navList.style.left = '0';
+                navList.style.right = '0';
+                navList.style.backgroundColor = 'var(--primary-color)';
+                navList.style.padding = '1rem';
+            }
+        });
+
+        // Event listener for window resize
+        window.addEventListener('resize', function() {
+            const navList = nav.querySelector('ul');
+            if (window.innerWidth > 768) {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'row';
+                navList.style.position = 'static';
+                navList.style.padding = '0';
+            } else {
+                navList.style.display = 'none';
+            }
+        });
+    });
+    </script>
+</body></html>

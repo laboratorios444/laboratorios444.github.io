@@ -1,0 +1,347 @@
+<html><head><base href=""/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proyectos - EcoCNI - Repositorio Institucional Digital</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+    :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #f0f0f0;
+        --accent-color: #ff6b6b;
+        --text-color: #333;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 0;
+        background-color: var(--secondary-color);
+    }
+
+    header {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-right: 2rem;
+    }
+
+    .logo svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--secondary-color);
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0 0;
+        font-weight: 300;
+    }
+
+    nav {
+        background-color: var(--primary-color);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+        padding: 0.5rem 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: 400;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--accent-color);
+    }
+
+    .nav-button {
+        display: none;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-button:hover {
+        background-color: #ff4f4f;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .project-item {
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-item h3 {
+        margin-top: 0;
+        color: var(--primary-color);
+    }
+
+    .project-item p {
+        margin-bottom: 0.5rem;
+    }
+
+    .project-item button {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-item button:hover {
+        background-color: #ff4f4f;
+    }
+
+    footer {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+        }
+
+        .logo {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: none;
+        }
+
+        .nav-button {
+            display: block;
+        }
+
+        .projects {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+<div class="header-content">
+<div class="logo">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"></path>
+</svg>
+</div>
+<div class="title">
+<h1>EcoCNI</h1>
+<h2>Repositorio Digital</h2>
+</div>
+</div>
+</header>
+<nav id="main-nav">
+<button class="nav-button" id="nav-toggle">Menú</button>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="proyectos.html">Proyectos</a></li>
+<li><a href="subir.html">Subir Proyecto</a></li>
+<li><a href="acerca de.html">Acerca de</a></li>
+</ul>
+</nav>
+<main>
+<h2>Proyectos</h2>
+<div class="projects" id="projects-container">
+<!-- Los proyectos se cargarán dinámicamente aquí -->
+</div>
+</main>
+<footer>
+<p>© 2024 ASmith. Todos los derechos reservados.</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const projectsContainer = document.getElementById('projects-container');
+        const nav = document.getElementById('main-nav');
+        const navToggle = document.getElementById('nav-toggle');
+
+        // Simulación de proyectos
+        const projects = [
+            {id: 1, title: "Estudio sobre energías renovables", author: "María González", description: "Análisis comparativo de diferentes fuentes de energía renovable", file: "energias_renovables.pdf"},
+            {id: 2, title: "Impacto de la inteligencia artificial en la educación", author: "Carlos Rodríguez", description: "Investigación sobre cómo la IA está transformando los métodos de enseñanza", file: "ia_educacion.docx"},
+            {id: 3, title: "Desarrollo sostenible en ciudades latinoamericanas", author: "Ana Martínez", description: "Estudio de caso sobre implementación de políticas de sostenibilidad urbana", file: "desarrollo_sostenible_latam.pdf"},
+            {id: 4, title: "Avances en la cura del cáncer", author: "Dr. Juan Pérez", description: "Revisión de los últimos descubrimientos en tratamientos contra el cáncer", file: "avances_cancer.pdf"},
+            {id: 5, title: "El impacto del cambio climático en la biodiversidad", author: "Laura Sánchez", description: "Análisis de los efectos del calentamiento global en ecosistemas vulnerables", file: "cambio_climatico_biodiversidad.pdf"},
+            {id: 6, title: "Nuevas tendencias en marketing digital", author: "Roberto Gómez", description: "Exploración de estrategias innovadoras en publicidad online", file: "marketing_digital_tendencias.pptx"}
+        ];
+
+        function renderProjects() {
+            projectsContainer.innerHTML = '';
+            projects.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.className = 'project-item';
+                projectElement.innerHTML = `
+                    <h3>${project.title}</h3>
+                    <p><strong>Autor:</strong> ${project.author}</p>
+                    <p><strong>Descripción:</strong> ${project.description}</p>
+                    <p><strong>Archivo:</strong> ${project.file}</p>
+                    <button onclick="viewProject(${project.id})">Ver Proyecto</button>
+                `;
+                projectsContainer.appendChild(projectElement);
+            });
+        }
+
+        renderProjects();
+
+        // Función para mantener el nav fijo al desplazarse
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Función para ver un proyecto (simulada)
+        window.viewProject = function(projectId) {
+            alert(`Ver proyecto con ID: ${projectId}`);
+            // Aquí se implementaría la lógica para ver el proyecto
+        };
+
+        // Responsive navigation
+        navToggle.addEventListener('click', function() {
+            const navList = nav.querySelector('ul');
+            if (navList.style.display === 'flex') {
+                navList.style.display = 'none';
+            } else {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'column';
+                navList.style.position = 'absolute';
+                navList.style.top = '100%';
+                navList.style.left = '0';
+                navList.style.right = '0';
+                navList.style.backgroundColor = 'var(--primary-color)';
+                navList.style.padding = '1rem';
+            }
+        });
+
+        // Event listener for window resize
+        window.addEventListener('resize', function() {
+            const navList = nav.querySelector('ul');
+            if (window.innerWidth > 768) {
+                navList.style.display = 'flex';
+                navList.style.flexDirection = 'row';
+                navList.style.position = 'static';
+                navList.style.padding = '0';
+            } else {
+                navList.style.display = 'none';
+            }
+        });
+    });
+    
+    </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsContainer = document.getElementById('projects-container');
+    let projects = JSON.parse(localStorage.getItem('projects')) || [];
+
+    function renderProjects() {
+        projectsContainer.innerHTML = '';
+        projects.forEach(project => {
+            const projectElement = document.createElement('div');
+            projectElement.className = 'project-item';
+            projectElement.innerHTML = `
+                <h3>${project.title}</h3>
+                <p><strong>Autor:</strong> ${project.author}</p>
+                <p><strong>Descripción:</strong> ${project.description}</p>
+                <p><strong>Archivo:</strong> <a href="${project.fileContent}" download="${project.fileName}">${project.fileName}</a></p>
+            `;
+            projectsContainer.appendChild(projectElement);
+        });
+    }
+
+    renderProjects();
+});
+</script></body></html>
