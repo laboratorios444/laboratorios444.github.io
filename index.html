@@ -1,6 +1,6 @@
-<html><head><base href="">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html><head><base href=""/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Inicio - EcoCNI - Repositorio Institucional Digital</title>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
@@ -260,125 +260,92 @@
 </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <svg xmlns="img/logo.png" viewBox="0 0 24 24">
-                    <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
-                </svg>
-            </div>
-            <div class="title">
-                <h1>EcoCNI</h1>
-                <h2>Repositorio Digital</h2>
-            </div>
-        </div>
-    </header>
-    <nav id="main-nav">
-        <button class="nav-button" id="nav-toggle">Menú</button>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="subir.html">Subir Proyecto</a></li>
-            <li><a href="acerca de.html">Acerca de</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="hero">
-            <h2>Bienvenido al Repositorio Digital</h2>
-            <p>Explora, comparte y colabora en proyectos académicos de nuestra comunidad escolar.</p>
-            <a href="proyectos.html" class="cta-button">Explorar Proyectos</a>
-        </section>
-        <section class="features">
-            <div class="feature">
-                <div class="feature-icon">📚</div>
-                <h3>Acceso Abierto</h3>
-                <p>Accede a una amplia gama de recursos académicos de forma gratuita y abierta.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🔍</div>
-                <h3>Búsqueda Avanzada</h3>
-                <p>Encuentra fácilmente los proyectos que te interesan con nuestro potente buscador.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🤝</div>
-                <h3>Colaboración</h3>
-                <p>Conecta con otros estudiantes y participa en proyectos colaborativos.</p>
-            </div>
-        </section>
-        <!-- <section class="recent-projects">
+<header>
+<div class="header-content">
+<div class="logo">
+<svg viewbox="0 0 24 24" xmlns="img/logo.png">
+<path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"></path>
+</svg>
+</div>
+<div class="title">
+<h1>EcoCNI</h1>
+<h2>Repositorio Digital</h2>
+</div>
+</div>
+</header>
+<nav id="main-nav">
+<button class="nav-button" id="nav-toggle">Menú</button>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="proyectos.html">Proyectos</a></li>
+<li><a href="subir.html">Subir Proyecto</a></li>
+<li><a href="acerca de.html">Acerca de</a></li>
+</ul>
+</nav>
+<main>
+<section class="hero">
+<h2>Bienvenido al Repositorio Digital</h2>
+<p>Explora, comparte y colabora en proyectos académicos de nuestra comunidad escolar.</p>
+<a class="cta-button" href="proyectos.html">Explorar Proyectos</a>
+</section>
+<section class="features">
+<div class="feature">
+<div class="feature-icon">📚</div>
+<h3>Acceso Abierto</h3>
+<p>Accede a una amplia gama de recursos académicos de forma gratuita y abierta.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">🔍</div>
+<h3>Búsqueda Avanzada</h3>
+<p>Encuentra fácilmente los proyectos que te interesan con nuestro potente buscador.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">🤝</div>
+<h3>Colaboración</h3>
+<p>Conecta con otros estudiantes y participa en proyectos colaborativos.</p>
+</div>
+</section>
+<!-- <section class="recent-projects">
             <h2>Proyectos Recientes</h2>
             <ul class="project-list" id="recent-projects-list"> -->
-                <!-- Los proyectos recientes se cargarán dinámicamente aquí -->
-            <!-- </ul>
+<!-- Los proyectos recientes se cargarán dinámicamente aquí -->
+<!-- </ul>
         </section> -->
-    </main>
-    <footer>
-        <p>&copy; 2024 ASmith. Todos los derechos reservados.</p>
-    </footer>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const nav = document.getElementById('main-nav');
-        const navToggle = document.getElementById('nav-toggle');
-        const recentProjectsList = document.getElementById('recent-projects-list');
+</main>
+<footer>
+<p>© 2024 ASmith. Todos los derechos reservados.</p>
+</footer>
 
-        // Simulación de proyectos recientes
-        const recentProjects = [
-            {title: "Estudio sobre energías renovables", author: "María González"},
-            {title: "Impacto de la inteligencia artificial en la educación", author: "Carlos Rodríguez"},
-            {title: "Desarrollo sostenible en ciudades latinoamericanas", author: "Ana Martínez"},
-            {title: "Avances en la cura del cáncer", author: "Dr. Juan Pérez"},
-            {title: "El impacto del cambio climático en la biodiversidad", author: "Laura Sánchez"}
-        ];
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navList = document.querySelector('nav ul');
 
-        function renderRecentProjects() {
-            recentProjectsList.innerHTML = '';
-            recentProjects.forEach(project => {
-                const li = document.createElement('li');
-                li.innerHTML = `<strong>${project.title}</strong> por ${project.author}`;
-                recentProjectsList.appendChild(li);
-            });
+    navToggle.addEventListener('click', function() {
+        if (navList.style.display === 'flex') {
+            navList.style.display = 'none';
+        } else {
+            navList.style.display = 'flex';
+            navList.style.flexDirection = 'column';
+            navList.style.position = 'absolute';
+            navList.style.top = '100%';
+            navList.style.left = '0';
+            navList.style.right = '0';
+            navList.style.backgroundColor = 'var(--primary-color)';
+            navList.style.padding = '1rem';
         }
-
-        renderRecentProjects();
-
-        // Función para mantener el nav fijo al desplazarse
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        // Responsive navigation
-        navToggle.addEventListener('click', function() {
-            const navList = nav.querySelector('ul');
-            if (navList.style.display === 'flex') {
-                navList.style.display = 'none';
-            } else {
-                navList.style.display = 'flex';
-                navList.style.flexDirection = 'column';
-                navList.style.position = 'absolute';
-                navList.style.top = '100%';
-                navList.style.left = '0';
-                navList.style.right = '0';
-                navList.style.backgroundColor = 'var(--primary-color)';
-                navList.style.padding = '1rem';
-            }
-        });
-
-        // Event listener for window resize
-        window.addEventListener('resize', function() {
-            const navList = nav.querySelector('ul');
-            if (window.innerWidth > 768) {
-                navList.style.display = 'flex';
-                navList.style.flexDirection = 'row';
-                navList.style.position = 'static';
-                navList.style.padding = '0';
-            } else {
-                navList.style.display = 'none';
-            }
-        });
     });
-    </script>
-</body></html>
+
+    // Ensure the menu is displayed correctly on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            navList.style.display = 'flex';
+            navList.style.flexDirection = 'row';
+            navList.style.position = 'static';
+            navList.style.padding = '0';
+        } else {
+            navList.style.display = 'none';
+        }
+    });
+});
+</script></body></html>
